@@ -494,8 +494,8 @@ Open `notebooks/08_mdda_defense.ipynb` once Defense 1 completes across all datas
 
 **[Diya Saini]**
 - Email: [sainidiya889@gmail.com ]
-- LinkedIn: [linkedin.com/in/your-profile](linkedin.com/in/diya-saini-ml)
-- GitHub: [github.com/your-username](github.com/Diya-Saini29)
+- LinkedIn: [linkedin.com/in/diya-saini-ml](linkedin.com/in/diya-saini-ml)
+- GitHub: [github.com/Diya-Saini29 ](github.com/Diya-Saini29)
 
 ---
 
