@@ -31,26 +31,67 @@ Deep learning models achieve impressive accuracy on dermatological image classif
 ---
 
 ## 🏗️ Architecture Pipeline
-```mermaid
-flowchart TD
-    A["🖼️ Input<br/>Dermoscopic Image (RGB)"]
-    B["🔧 Preprocessing<br/>CLAHE · Resize 224×224 · Normalize"]
-    C["🔀 Augmentation (train only)<br/>Flip · Rotate · ColorJitter · Affine"]
-    D["🧠 Backbone<br/>DenseNet121 (ImageNet pretrained)"]
-    E["🎯 Attention<br/>CBAM (Channel + Spatial)"]
-    F["📊 Head<br/>GAP → Dropout(0.3) → Linear(1024→8)"]
-    G["⚙️ Training<br/>Focal Loss · AdamW · Cosine Annealing"]
-
-    A --> B --> C --> D --> E --> F --> G
-
-    style A fill:#e1f5ff,stroke:#0288d1,stroke-width:2px
-    style B fill:#fff3e0,stroke:#f57c00,stroke-width:2px
-    style C fill:#fff3e0,stroke:#f57c00,stroke-width:2px
-    style D fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
-    style E fill:#fce4ec,stroke:#c2185b,stroke-width:2px
-    style F fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
-    style G fill:#eceff1,stroke:#455a64,stroke-width:2px
-```
+                    ┌─────────────────────────────────────┐
+                    │   INPUT                             │
+                    │   Dermoscopic Image (RGB)           │
+                    │   Any resolution                    │
+                    └──────────────────┬──────────────────┘
+                                       │
+                                       ▼
+                    ┌─────────────────────────────────────┐
+                    │   PREPROCESSING                     │
+                    │   • CLAHE in LAB color space        │
+                    │     (clip=2.0, grid=8×8)            │
+                    │   • Resize → 224 × 224              │
+                    │   • ImageNet normalization          │
+                    └──────────────────┬──────────────────┘
+                                       │
+                                       ▼
+                    ┌─────────────────────────────────────┐
+                    │   DATA AUGMENTATION (train only)    │
+                    │   • RandomHorizontalFlip (p=0.5)    │
+                    │   • RandomVerticalFlip   (p=0.3)    │
+                    │   • RandomRotation       (±30°)     │
+                    │   • ColorJitter          (±0.15)    │
+                    │   • RandomAffine         (10%)      │
+                    └──────────────────┬──────────────────┘
+                                       │
+                                       ▼
+                    ┌─────────────────────────────────────┐
+                    │   BACKBONE                          │
+                    │   DenseNet121                       │
+                    │   (ImageNet pretrained)             │
+                    │   → 1024-channel feature map        │
+                    └──────────────────┬──────────────────┘
+                                       │
+                                       ▼
+                    ┌─────────────────────────────────────┐
+                    │   ATTENTION                         │
+                    │   CBAM                              │
+                    │   • Channel Attention (reduction=16)│
+                    │   • Spatial Attention (kernel=7×7)  │
+                    └──────────────────┬──────────────────┘
+                                       │
+                                       ▼
+                    ┌─────────────────────────────────────┐
+                    │   CLASSIFICATION HEAD               │
+                    │   • Global Average Pooling          │
+                    │   • Dropout (p=0.3)                 │
+                    │   • Linear (1024 → 8 classes)       │
+                    └──────────────────┬──────────────────┘
+                                       │
+                                       ▼
+                    ┌─────────────────────────────────────┐
+                    │   TRAINING CONFIGURATION            │
+                    │   • Loss:      Focal Loss (α=0.25,  │
+                    │                γ=2.0)               │
+                    │   • Optimizer: AdamW (lr=3e-4,      │
+                    │                wd=1e-3)             │
+                    │   • Scheduler: CosineAnnealingLR    │
+                    │                (T_max=40)           │
+                    │   • Batch:     32                   │
+                    │   • Epochs:    40                   │
+                    └─────────────────────────────────────┘
 ---
 
 ## 📊 Datasets
