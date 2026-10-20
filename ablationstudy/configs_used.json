@@ -1,0 +1,99 @@
+{
+  "dataset": "BCN20000",
+  "M1_path": "/kaggle/input/models/rashikarathore/baseline-model-1/other/default/1/best_model_epoch_24.pth",
+  "M2_path": "/kaggle/input/models/rashikarathore/adv-model/other/default/1/best_model_bcn_multi_adv.pth",
+  "test_set": "reconstructed 1,242 images (seed=42, stratify=diagnosis, 80/10/10)",
+  "bcn_best_config": {
+    "scales": "(0.5, 1.0, 2.0)",
+    "sigma": 0.05,
+    "T": 1,
+    "N": 1,
+    "gamma": 0.1,
+    "tv_iters": 30,
+    "tv_tau": 0.125
+  },
+  "epsilons_tested": [
+    2,
+    4,
+    8
+  ],
+  "step1_variants": [
+    "full",
+    "no_multiscale",
+    "no_diffusion",
+    "no_tv",
+    "no_aggregation",
+    "uniform_weights",
+    "nn_downsampling",
+    "jacobi_tv",
+    "no_norm"
+  ],
+  "step2_sweeps": [
+    {
+      "name": "S2.1_sigma",
+      "param": "sigma",
+      "values": [
+        "0.02",
+        "0.05",
+        "0.08",
+        "0.125",
+        "0.2"
+      ]
+    },
+    {
+      "name": "S2.2_T",
+      "param": "T",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ]
+    },
+    {
+      "name": "S2.3_N",
+      "param": "N",
+      "values": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "name": "S2.4_gamma",
+      "param": "gamma",
+      "values": [
+        "0.05",
+        "0.1",
+        "0.2",
+        "0.3"
+      ]
+    },
+    {
+      "name": "S2.5_scales",
+      "param": "scales",
+      "values": [
+        "(1.0,)",
+        "(0.5, 1.0)",
+        "(0.5, 1.0, 2.0)",
+        "(0.25, 0.5, 1.0, 2.0)"
+      ]
+    },
+    {
+      "name": "S2.6_tv_iters",
+      "param": "tv_iters",
+      "values": [
+        "10",
+        "20",
+        "30",
+        "50"
+      ]
+    }
+  ],
+  "step3_attacks": [
+    "PGD_full",
+    "PGD_top_half",
+    "PGD_bottom_half",
+    "PGD_patch_32"
+  ]
+}

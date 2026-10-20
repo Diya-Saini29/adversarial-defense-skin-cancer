@@ -1,0 +1,98 @@
+{
+  "PGD_full_eps2": {
+    "attack": "PGD",
+    "region": "full",
+    "eps": 2,
+    "asr_m2": 10.2672,
+    "asr_m2_mdda": 13.6428,
+    "delta_asr": -3.3755
+  },
+  "PGD_full_eps4": {
+    "attack": "PGD",
+    "region": "full",
+    "eps": 4,
+    "asr_m2": 19.4093,
+    "asr_m2_mdda": 17.4402,
+    "delta_asr": 1.9691
+  },
+  "PGD_full_eps8": {
+    "attack": "PGD",
+    "region": "full",
+    "eps": 8,
+    "asr_m2": 36.1463,
+    "asr_m2_mdda": 27.7075,
+    "delta_asr": 8.4388
+  },
+  "PGD_top_half_eps2": {
+    "attack": "PGD",
+    "region": "top_half",
+    "eps": 2,
+    "asr_m2": 3.5162,
+    "asr_m2_mdda": 11.2518,
+    "delta_asr": -7.7356
+  },
+  "PGD_top_half_eps4": {
+    "attack": "PGD",
+    "region": "top_half",
+    "eps": 4,
+    "asr_m2": 9.8453,
+    "asr_m2_mdda": 13.0802,
+    "delta_asr": -3.2349
+  },
+  "PGD_top_half_eps8": {
+    "attack": "PGD",
+    "region": "top_half",
+    "eps": 8,
+    "asr_m2": 18.4248,
+    "asr_m2_mdda": 17.5809,
+    "delta_asr": 0.8439
+  },
+  "PGD_bottom_half_eps2": {
+    "attack": "PGD",
+    "region": "bottom_half",
+    "eps": 2,
+    "asr_m2": 4.2194,
+    "asr_m2_mdda": 11.3924,
+    "delta_asr": -7.173
+  },
+  "PGD_bottom_half_eps4": {
+    "attack": "PGD",
+    "region": "bottom_half",
+    "eps": 4,
+    "asr_m2": 10.2672,
+    "asr_m2_mdda": 14.2053,
+    "delta_asr": -3.9381
+  },
+  "PGD_bottom_half_eps8": {
+    "attack": "PGD",
+    "region": "bottom_half",
+    "eps": 8,
+    "asr_m2": 19.8312,
+    "asr_m2_mdda": 18.5654,
+    "delta_asr": 1.2658
+  },
+  "PGD_patch_32_eps2": {
+    "attack": "PGD",
+    "region": "patch_32",
+    "eps": 2,
+    "asr_m2": 0.4219,
+    "asr_m2_mdda": 9.564,
+    "delta_asr": -9.1421
+  },
+  "PGD_patch_32_eps4": {
+    "attack": "PGD",
+    "region": "patch_32",
+    "eps": 4,
+    "asr_m2": 1.2658,
+    "asr_m2_mdda": 10.5485,
+    "delta_asr": -9.2827
+  },
+  "PGD_patch_32_eps8": {
+    "attack": "PGD",
+    "region": "patch_32",
+    "eps": 8,
+    "asr_m2": 3.3755,
+    "asr_m2_mdda": 11.3924,
+    "delta_asr": -8.0169
+  }
+}

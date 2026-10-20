@@ -1,0 +1,65 @@
+{
+  "S1.0_full": {
+    "clean_acc": 54.5894,
+    "asr_eps2": 13.9241,
+    "asr_eps4": 17.0183,
+    "asr_eps8": 27.8481,
+    "latency_ms_per_image": 37.89
+  },
+  "S1.1_no_multiscale": {
+    "clean_acc": 41.4654,
+    "asr_eps2": 36.9902,
+    "asr_eps4": 38.3966,
+    "asr_eps8": 39.9437,
+    "latency_ms_per_image": 33.62
+  },
+  "S1.2_no_diffusion": {
+    "clean_acc": 54.9919,
+    "asr_eps2": 14.4866,
+    "asr_eps4": 18.4248,
+    "asr_eps8": 28.27,
+    "latency_ms_per_image": 39.68
+  },
+  "S1.3_no_tv": {
+    "clean_acc": 56.1997,
+    "asr_eps2": 9.4233,
+    "asr_eps4": 16.1744,
+    "asr_eps8": 31.7862,
+    "latency_ms_per_image": 43.56
+  },
+  "S1.4_no_aggregation": {
+    "clean_acc": 54.9114,
+    "asr_eps2": 15.0492,
+    "asr_eps4": 19.128,
+    "asr_eps8": 25.3165,
+    "latency_ms_per_image": 42.39
+  },
+  "S1.5_uniform_weights": {
+    "clean_acc": 55.9581,
+    "asr_eps2": 13.0802,
+    "asr_eps4": 18.0028,
+    "asr_eps8": 25.7384,
+    "latency_ms_per_image": 43.08
+  },
+  "S1.6_nn_downsampling": {
+    "clean_acc": 54.7504,
+    "asr_eps2": 14.0647,
+    "asr_eps4": 17.2996,
+    "asr_eps8": 27.9887,
+    "latency_ms_per_image": 43.53
+  },
+  "S1.7_jacobi_tv": {
+    "clean_acc": 51.3688,
+    "asr_eps2": 16.8776,
+    "asr_eps4": 20.8158,
+    "asr_eps8": 28.27,
+    "latency_ms_per_image": 39.82
+  },
+  "S1.8_no_norm": {
+    "clean_acc": 33.1723,
+    "asr_eps2": 53.4459,
+    "asr_eps4": 54.4304,
+    "asr_eps8": 55.2743,
+    "latency_ms_per_image": 42.28
+  }
+}
