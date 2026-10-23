@@ -1,0 +1,18 @@
+{
+  "M1_clean": 63.5204,
+  "M2_clean": 56.1224,
+  "M1_MDDA_clean": 51.0204,
+  "M2_MDDA_clean": 54.0816,
+  "M1_pgd_eps2": 98.3936,
+  "M1_pgd_eps4": 100.0,
+  "M1_pgd_eps8": 100.0,
+  "M2_pgd_eps2": 25.4545,
+  "M2_pgd_eps4": 47.2727,
+  "M2_pgd_eps8": 78.1818,
+  "M2_MDDA_pgd_eps2": 17.7273,
+  "M2_MDDA_pgd_eps4": 27.2727,
+  "M2_MDDA_pgd_eps8": 52.2727,
+  "M1_MDDA_pgd_eps2": 38.9558,
+  "M1_MDDA_pgd_eps4": 45.7831,
+  "M1_MDDA_pgd_eps8": 61.0442
+}

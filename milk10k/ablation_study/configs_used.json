@@ -1,0 +1,94 @@
+{
+  "dataset": "MILK10k (dermoscopic, 7 effective classes)",
+  "M1_path": "/content/drive/MyDrive/milk_models/best_model_milk_final.pth",
+  "M2_path": "/content/drive/MyDrive/milk_multi_adv/best_model_milk_multi_adv.pth",
+  "milk_best_config": {
+    "scales": "(0.5, 1.0, 2.0)",
+    "sigma": 0.02,
+    "T": 1,
+    "N": 1,
+    "gamma": 0.1,
+    "tv_iters": 30,
+    "tv_tau": 0.125
+  },
+  "epsilons_tested": [
+    2,
+    4,
+    8
+  ],
+  "split_info": "reconstructed 2609 images (BCC downsampled 2522\u2192653); split 1826/391/392",
+  "step1_variants": [
+    "full",
+    "no_multiscale",
+    "no_diffusion",
+    "no_tv",
+    "no_aggregation",
+    "uniform_weights",
+    "nn_downsampling",
+    "jacobi_tv",
+    "no_norm"
+  ],
+  "step2_sweeps": [
+    {
+      "name": "S2.1_sigma",
+      "param": "sigma",
+      "values": [
+        "0.01",
+        "0.02",
+        "0.05",
+        "0.08",
+        "0.125"
+      ]
+    },
+    {
+      "name": "S2.2_T",
+      "param": "T",
+      "values": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "name": "S2.3_N",
+      "param": "N",
+      "values": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "name": "S2.4_gamma",
+      "param": "gamma",
+      "values": [
+        "0.05",
+        "0.1",
+        "0.2"
+      ]
+    },
+    {
+      "name": "S2.5_scales",
+      "param": "scales",
+      "values": [
+        "(1.0,)",
+        "(0.5, 1.0)",
+        "(0.5, 1.0, 2.0)"
+      ]
+    },
+    {
+      "name": "S2.6_tv_iters",
+      "param": "tv_iters",
+      "values": [
+        "10",
+        "20",
+        "30"
+      ]
+    }
+  ],
+  "step3_attacks": [
+    "PGD_full",
+    "PGD_top_half",
+    "PGD_bottom_half",
+    "PGD_patch_32"
+  ]
+}

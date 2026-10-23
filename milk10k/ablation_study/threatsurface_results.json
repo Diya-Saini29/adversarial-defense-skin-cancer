@@ -1,0 +1,98 @@
+{
+  "PGD_full_eps2": {
+    "attack": "PGD",
+    "region": "full",
+    "eps": 2,
+    "asr_m2": 25.4545,
+    "asr_m2_mdda": 16.8182,
+    "delta_asr": 8.6364
+  },
+  "PGD_full_eps4": {
+    "attack": "PGD",
+    "region": "full",
+    "eps": 4,
+    "asr_m2": 47.7273,
+    "asr_m2_mdda": 26.8182,
+    "delta_asr": 20.9091
+  },
+  "PGD_full_eps8": {
+    "attack": "PGD",
+    "region": "full",
+    "eps": 8,
+    "asr_m2": 78.1818,
+    "asr_m2_mdda": 51.3636,
+    "delta_asr": 26.8182
+  },
+  "PGD_top_half_eps2": {
+    "attack": "PGD",
+    "region": "top_half",
+    "eps": 2,
+    "asr_m2": 10.9091,
+    "asr_m2_mdda": 13.1818,
+    "delta_asr": -2.2727
+  },
+  "PGD_top_half_eps4": {
+    "attack": "PGD",
+    "region": "top_half",
+    "eps": 4,
+    "asr_m2": 25.9091,
+    "asr_m2_mdda": 18.1818,
+    "delta_asr": 7.7273
+  },
+  "PGD_top_half_eps8": {
+    "attack": "PGD",
+    "region": "top_half",
+    "eps": 8,
+    "asr_m2": 50.0,
+    "asr_m2_mdda": 28.6364,
+    "delta_asr": 21.3636
+  },
+  "PGD_bottom_half_eps2": {
+    "attack": "PGD",
+    "region": "bottom_half",
+    "eps": 2,
+    "asr_m2": 10.4545,
+    "asr_m2_mdda": 14.0909,
+    "delta_asr": -3.6364
+  },
+  "PGD_bottom_half_eps4": {
+    "attack": "PGD",
+    "region": "bottom_half",
+    "eps": 4,
+    "asr_m2": 23.6364,
+    "asr_m2_mdda": 15.9091,
+    "delta_asr": 7.7273
+  },
+  "PGD_bottom_half_eps8": {
+    "attack": "PGD",
+    "region": "bottom_half",
+    "eps": 8,
+    "asr_m2": 44.0909,
+    "asr_m2_mdda": 26.3636,
+    "delta_asr": 17.7273
+  },
+  "PGD_patch_32_eps2": {
+    "attack": "PGD",
+    "region": "patch_32",
+    "eps": 2,
+    "asr_m2": 1.3636,
+    "asr_m2_mdda": 10.4545,
+    "delta_asr": -9.0909
+  },
+  "PGD_patch_32_eps4": {
+    "attack": "PGD",
+    "region": "patch_32",
+    "eps": 4,
+    "asr_m2": 2.2727,
+    "asr_m2_mdda": 11.3636,
+    "delta_asr": -9.0909
+  },
+  "PGD_patch_32_eps8": {
+    "attack": "PGD",
+    "region": "patch_32",
+    "eps": 8,
+    "asr_m2": 5.4545,
+    "asr_m2_mdda": 11.8182,
+    "delta_asr": -6.3636
+  }
+}

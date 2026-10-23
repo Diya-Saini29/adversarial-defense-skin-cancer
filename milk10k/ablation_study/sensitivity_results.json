@@ -1,0 +1,116 @@
+{
+  "S2.1_sigma=0.01": {
+    "param": "sigma",
+    "value": "0.01",
+    "clean_acc": 53.8265,
+    "asr_eps8": 55.0
+  },
+  "S2.1_sigma=0.02": {
+    "param": "sigma",
+    "value": "0.02",
+    "clean_acc": 53.5714,
+    "asr_eps8": 52.7273
+  },
+  "S2.1_sigma=0.05": {
+    "param": "sigma",
+    "value": "0.05",
+    "clean_acc": 53.3163,
+    "asr_eps8": 46.8182
+  },
+  "S2.1_sigma=0.08": {
+    "param": "sigma",
+    "value": "0.08",
+    "clean_acc": 52.8061,
+    "asr_eps8": 38.6364
+  },
+  "S2.1_sigma=0.125": {
+    "param": "sigma",
+    "value": "0.125",
+    "clean_acc": 50.7653,
+    "asr_eps8": 39.5455
+  },
+  "S2.2_T=1": {
+    "param": "T",
+    "value": "1",
+    "clean_acc": 53.5714,
+    "asr_eps8": 52.7273
+  },
+  "S2.2_T=2": {
+    "param": "T",
+    "value": "2",
+    "clean_acc": 41.3265,
+    "asr_eps8": 48.6364
+  },
+  "S2.2_T=3": {
+    "param": "T",
+    "value": "3",
+    "clean_acc": 38.0102,
+    "asr_eps8": 49.0909
+  },
+  "S2.3_N=1": {
+    "param": "N",
+    "value": "1",
+    "clean_acc": 53.5714,
+    "asr_eps8": 51.8182
+  },
+  "S2.3_N=2": {
+    "param": "N",
+    "value": "2",
+    "clean_acc": 50.2551,
+    "asr_eps8": 40.4545
+  },
+  "S2.4_gamma=0.05": {
+    "param": "gamma",
+    "value": "0.05",
+    "clean_acc": 56.1224,
+    "asr_eps8": 66.8182
+  },
+  "S2.4_gamma=0.1": {
+    "param": "gamma",
+    "value": "0.1",
+    "clean_acc": 53.5714,
+    "asr_eps8": 52.7273
+  },
+  "S2.4_gamma=0.2": {
+    "param": "gamma",
+    "value": "0.2",
+    "clean_acc": 41.5816,
+    "asr_eps8": 47.2727
+  },
+  "S2.5_scales=(1.0,)": {
+    "param": "scales",
+    "value": "(1.0,)",
+    "clean_acc": 48.7245,
+    "asr_eps8": 38.6364
+  },
+  "S2.5_scales=(0.5, 1.0)": {
+    "param": "scales",
+    "value": "(0.5, 1.0)",
+    "clean_acc": 53.3163,
+    "asr_eps8": 43.6364
+  },
+  "S2.5_scales=(0.5, 1.0, 2.0)": {
+    "param": "scales",
+    "value": "(0.5, 1.0, 2.0)",
+    "clean_acc": 53.5714,
+    "asr_eps8": 51.8182
+  },
+  "S2.6_tv_iters=10": {
+    "param": "tv_iters",
+    "value": "10",
+    "clean_acc": 52.8061,
+    "asr_eps8": 60.4545
+  },
+  "S2.6_tv_iters=20": {
+    "param": "tv_iters",
+    "value": "20",
+    "clean_acc": 53.3163,
+    "asr_eps8": 53.1818
+  },
+  "S2.6_tv_iters=30": {
+    "param": "tv_iters",
+    "value": "30",
+    "clean_acc": 53.5714,
+    "asr_eps8": 51.8182
+  }
+}
